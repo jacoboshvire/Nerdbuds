@@ -1292,7 +1292,44 @@ footer #main_text #contact #main_cnt li a img{
     
 }
 
+@media (max-width: 400px ) {
+    #main #contain #image img{
+        width: 150px;
+        height: 150px;
+    } 
+
+    #main4 #main_image_area img{
+        width: 150px;
+        height: 150px;
+    } 
+
+    #main3 #center #image_center img{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
 @media (max-width: 600px){
+
+    .main_nav{
+        /* position: fixed; */
+        top: 15%;
+        right: 5%;
+        left: 5%;
+        height: 60vh;
+        width: 100vh;
+        padding: 20%;
+        /* background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px rgba(26, 26, 26, 0.219);
+        clip-path: circle(0);
+        transform: scale(0) translate(1px);
+        transition: 500ms; */
+        /* animation: navbar 500ms ease-in backwards; */
+    }
     #main #contain{
         flex-direction: column;
     }
