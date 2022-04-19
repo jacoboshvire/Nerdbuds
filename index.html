@@ -155,10 +155,10 @@
                 </a>
             </div>
             <div id="main_nav" class="main_nav">
-                <li><a href="/">home</a><span></span></li>
+                <li><a href="#">home</a><span></span></li>
                 <li><a href="#">order</a><span></span></li>
-                <li><a href="#main5">about us</a><span></span></li>
-                <li><a href="#main7">contact</a><span></span></li>
+                <li><a href="#">about us</a><span></span></li>
+                <li><a href="#">contact</a><span></span></li>
                 <!-- <li><a href="signin.html">get started &RightArrow;</a><span></span></li> -->
             </div>
             <div id="menu" class="menu" onclick="menuEffect()">
@@ -464,19 +464,19 @@
                 </div>
                 <br>
                 <div id="input1">
-                    <label for="name" id="name_input">name</label>
-                    <input type="text" name="name" id="name">
-                    <span></span>
+                    <label for="name" id="name_input" class="name">name</label>
+                    <input type="text" name="name" id="name" class="input" oninput="inputanim()">
+                    <span class="namespan"></span>
                 </div>
                 <div id="input2">
-                    <label for="email" id="email_input">email</label>
-                    <input type="email" name="email" id="email">
-                    <span></span>
+                    <label for="email" id="email_input" class="send">email</label>
+                    <input type="email" name="email" id="email" class="input1" oninput="inputanim1()">
+                    <span class="emailspan"></span>
                 </div>
                 <div id="input3">
-                    <label for="message" id="messsage_textarea">message</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    <span></span>
+                    <label for="message" id="messsage_textarea" class="message">message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="input2"oninput="inputanim2()"></textarea>
+                    <span class="messagespan"></span>
                 </div>
                 <br>
                 <button><a>send message</a> <span></span></button>
@@ -524,10 +524,10 @@
                     </h1>
                 </div>
                 <div id="main_nav">
-                    <li><a href="/">home</a></li>
-                    <li><a href="#main5">about</a></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
                     <li><a href="#">works</a></li>
-                    <li><a href="#main7">contact</a></li>
+                    <li><a href="#">contact</a></li>
                     <li><a href="#">sign up</a></li>
                 </div>
             </div>
@@ -583,6 +583,47 @@
             mainNav.classList.toggle("newmainNav")
             document.querySelector(".backimage").classList.toggle("newbackimage")
         }
+
+        var nameinput = document.querySelector(".name");
+        var namespan = document.querySelector(".namespan");
+        var namespace = document.querySelector(".input")
+        function inputanim(){
+            if (namespace.value !== ""){
+                nameinput.classList.add("newname")
+                namespan.classList.add("newnamespan")
+            } else {
+                nameinput.classList.remove("newname")
+                namespan.classList.remove("newnamespan")
+            }
+        }
+
+        var send = document.querySelector(".send");
+        var emailspan = document.querySelector(".emailspan");
+        var emailspace = document.querySelector(".input1")
+        function inputanim1(){
+            if (emailspace.value !== ""){
+                send.classList.add("newsend")
+                emailspan.classList.add("newemailspan")
+            } else {
+                send.classList.remove("newsend")
+                emailspan.classList.remove("newemailspan")
+            }
+        }
+
+        var message = document.querySelector(".message");
+        var messagespan = document.querySelector(".messagespan");
+        var messagespace = document.querySelector(".input2")
+        function inputanim2(){
+            if (messagespace.value !== ""){
+                message.classList.add("newmessage")
+                messagespan.classList.add("newmessagespan")
+            } else {
+                message.classList.remove("newmessage")
+                messagespan.classList.remove("newmessagespan")
+            }
+        }
+
+
     </script>
 </body>
 </html>
