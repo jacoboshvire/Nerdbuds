@@ -649,19 +649,33 @@ header{
     width: 100%;
     text-transform: capitalize;
     border: none;
+    outline: none;
 }
 
-#main7 #from form #input1 label{
+.name{
     position: absolute;
     bottom: 50%;
     color: gray;
     text-transform: capitalize;
+    transition: 500ms;
 }
+
+.newname{
+    bottom: 100%;
+    transform: scale(.6);
+    color: #5484C7;
+}
+
  
-#main7 #from form #input1 span{
+.namespan{
     width: 100%;
     height: 1px;
     background-color: gray;
+}
+
+.newnamespan{
+    background-color: #5484C7; 
+    height: 2px;
 }
 /* input 2 */
 #main7 #from form #input2{
@@ -676,21 +690,32 @@ header{
  
 #main7 #from form #input2 input{
     width: 100%;
-   
+    outline: none;
     border: none;
 }
 
-#main7 #from form #input2 label{
+.send{
     position: absolute;
     bottom: 50%;
     color: gray;
     text-transform: capitalize;
 }
+
+.newsend{
+    bottom: 100%;
+    transform: scale(.6);
+    color: #5484C7;
+}
  
-#main7 #from form #input2 span{
+.emailspan{
     width: 100%;
     height: 1px;
     background-color: gray;
+}
+
+.newemailspan{
+    background-color: #5484C7; 
+    height: 2px;  
 }
 
 /* input3 */
@@ -709,19 +734,31 @@ header{
     width: 100%;
     border: none;
     resize: none;
+    outline: none;
 }
 
-#main7 #from form #input3 label{
+.message{
     position: absolute;
     bottom: 80%;
     color: gray;
     text-transform: capitalize;
 }
+
+.newmessage{
+    bottom: 100%;
+    transform: scale(.6);
+    color: #5484C7;
+}
  
-#main7 #from form #input3 span{
+.messagespan{
     width: 100%;
     height: 1px;
     background-color: gray;
+}
+
+.newmessagespan{
+    background-color: #5484C7; 
+    height: 2px; 
 }
 
 #main7 form button{
@@ -1292,7 +1329,44 @@ footer #main_text #contact #main_cnt li a img{
     
 }
 
+@media (max-width: 400px ) {
+    #main #contain #image img{
+        width: 150px;
+        height: 150px;
+    } 
+
+    #main4 #main_image_area img{
+        width: 150px;
+        height: 150px;
+    } 
+
+    #main3 #center #image_center img{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
 @media (max-width: 600px){
+
+    .main_nav{
+        /* position: fixed; */
+        top: 15%;
+        right: 5%;
+        left: 5%;
+        height: 60vh;
+        width: 100vh;
+        padding: 20%;
+        /* background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px rgba(26, 26, 26, 0.219);
+        clip-path: circle(0);
+        transform: scale(0) translate(1px);
+        transition: 500ms; */
+        /* animation: navbar 500ms ease-in backwards; */
+    }
     #main #contain{
         flex-direction: column;
     }
